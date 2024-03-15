@@ -6,6 +6,7 @@ import tag
 
 def create_video_server(users_file, rec):
     app = Flask(__name__, template_folder='templates')
+
     # 设置用户名和密码
     verify = {}
     with open(users_file) as file:
@@ -15,6 +16,7 @@ def create_video_server(users_file, rec):
 
     def generate_frames():
         camera = cv2.VideoCapture(0)  # 0 for built-in webcam
+
         while tag.running:
             success, frame = camera.read()
             frame = rec.recognize(frame)
