@@ -14,5 +14,3 @@ class faceRec:
         for (x, y, w, h) in faces:  # 绘制矩形框
             cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
         return img
-
-
